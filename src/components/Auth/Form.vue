@@ -55,7 +55,7 @@ export default {
 
 .inner {
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
-    1px 1px 5px rgba(255, 255, 255, 1);
+    2px 2px 5px rgba(154, 147, 140, 0.5);
 
   margin: 0 auto;
   max-width: 400px;
@@ -77,7 +77,7 @@ export default {
   padding: 10px;
   width: 100%;
   font-size: 16px;
-  border: 1px solid #000000;
+  border: 1px solid rgba(#000000, 0.3);
 
   &:focus {
     outline: none;
@@ -91,7 +91,7 @@ label + label {
 // .form__checkbox
 .form__label-checkbox {
   display: none;
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .form__label-checkbox.active {
@@ -108,8 +108,8 @@ label + label {
 
 .form__check-style {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border: 1px solid rgba(#000000, 0.7);
 
   left: 5px;

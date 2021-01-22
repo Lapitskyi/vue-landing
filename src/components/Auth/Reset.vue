@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       reg: {
-        links: "/",
+        links: [{ name: "Вспомнили?", link: "/login" }],
         title: "Востановление пароля",
         btn: "Отправить для востановления пароля",
         forms: [{ items: { name: "name", placeholder: "Почта" } }],

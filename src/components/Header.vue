@@ -3,10 +3,12 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__logo">
-          <img
-            src="https://odesk-prod-portraits.s3.amazonaws.com/Companies:4725442:CompanyLogoURL?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=PoqAdyOy3ouPqYLASItWAAD1qNA%3D"
-            alt="logo"
-          />
+          <router-link to="./">
+            <img
+              src="https://odesk-prod-portraits.s3.amazonaws.com/Companies:4725442:CompanyLogoURL?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=PoqAdyOy3ouPqYLASItWAAD1qNA%3D"
+              alt="logo"
+            />
+          </router-link>
         </div>
 
         <ul class="header__list" :class="{ active: isActive }">
@@ -51,6 +53,7 @@ export default {
     return {
       items: [
         { title: "Home", path: "/" },
+
         { title: "Order", path: "/order" },
         { title: "Portfolio", path: "/portfolio" },
         { title: "Login", path: "/login" },
@@ -174,16 +177,18 @@ export default {
 }
 .social__list-link {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: solid 1px #999;
+  border-radius: 8px;
   background-color: transparent;
   position: relative;
 
   &:hover {
     border-color: #00a4e5;
+    background-color: #00a4e5;
     .contact__list-icon {
-      fill: #00a4e5;
+      fill: #999;
     }
   }
 }
