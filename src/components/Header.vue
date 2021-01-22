@@ -29,8 +29,12 @@
           </li>
         </ul>
 
-        <button class="header__btn" :class="{ active: isActive }">
-          <span class="header__btn-line"></span>
+        <button
+          class="header__btn btn"
+          :class="{ active: isActive }"
+          @click="isActive = !isActive"
+        >
+          <span :class="{ active: isActive }" class="header__btn-line"></span>
         </button>
       </div>
       <router-view />
@@ -80,7 +84,7 @@ export default {
         },
       ],
 
-      // isActive: true,
+      isActive: false,
     };
   },
 };
@@ -256,5 +260,11 @@ export default {
   //   z-index: 50;
   //   transition: fixed 0.2s linear;
   // }
+}
+
+@media (max-width: 768px) {
+  .social__list {
+    display: none;
+  }
 }
 </style>

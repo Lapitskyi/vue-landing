@@ -83,7 +83,7 @@ body {
   padding: 0 15px;
 }
 
-button {
+.btn {
   display: block;
   border: none;
   box-shadow: none;
