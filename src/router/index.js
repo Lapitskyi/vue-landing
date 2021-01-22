@@ -4,6 +4,7 @@ import Orders from '../components/Orders/Orders'
 import Portfolio from '../components/Portfolio/Portfolio'
 import Login from '../components/Auth/Login'
 import Registration from '../components/Auth/Registration'
+import Reset from '../components/Auth/Reset'
 
 
 
@@ -32,6 +33,11 @@ const routes = [
     path: '/registration',
     name: 'Registration',
     component: Registration
+  },
+  {
+    path: '/reset',
+    name: 'Reset',
+    component: Reset
   },
 
 ]
