@@ -4,10 +4,7 @@
       <div class="header__inner">
         <div class="header__logo">
           <router-link to="./">
-            <img
-              src="https://odesk-prod-portraits.s3.amazonaws.com/Companies:4725442:CompanyLogoURL?AWSAccessKeyId=AKIAIKIUKM3HBSWUGCNQ&Expires=2147483647&Signature=PoqAdyOy3ouPqYLASItWAAD1qNA%3D"
-              alt="logo"
-            />
+            <img src="https://via.placeholder.com/100" alt="logo" />
           </router-link>
         </div>
 
@@ -25,8 +22,12 @@
             v-for="item in socials"
             :key="item.icon"
           >
-            <a class="social__list-link" :href="item.link">
-              <img class="social__list-icon" :src="item.icon" alt="" />
+            <a
+              class="social__list-link"
+              :href="item.link"
+              :aria-label="item.label"
+            >
+              <img class="social__list-icon" :src="item.icon" :alt="item.alt" />
             </a>
           </li>
         </ul>
@@ -64,26 +65,36 @@ export default {
           icon:
             "https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-256.png",
           link: "https://www.instagram.com/",
+          label: "instagram",
+          alt: "logo_instagram",
         },
         {
           icon:
             "https://cdn4.iconfinder.com/data/icons/social-icons-16/512/LinkedIn_alt-256.png",
           link: "https://www.linkedin.com/",
+          label: "linkedin",
+          alt: "logo_linkedin",
         },
         {
           icon:
             "https://cdn2.iconfinder.com/data/icons/picons-social/57/79-upwork-2-256.png",
           link: "https://www.upwork.com/",
+          label: "upwork",
+          alt: "logo_upwork",
         },
         {
           icon:
             "https://cdn3.iconfinder.com/data/icons/glypho-free/64/phone-outline-256.png",
           link: "tel:+8050000000",
+          label: "tel",
+          alt: "logo_tel",
         },
         {
           icon:
             "https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-02-256.png",
           link: "mailto:mail.gmail.com",
+          label: "mail",
+          alt: "mail",
         },
       ],
 

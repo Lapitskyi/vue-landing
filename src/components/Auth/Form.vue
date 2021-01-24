@@ -43,7 +43,8 @@
 <script>
 export default {
   name: "Form",
-  props: { reg: null },
+  // props: { reg: null },
+  props: ["reg"],
 };
 </script>
 

@@ -3,27 +3,29 @@
     <div class="about">
       <div class="about__inner">
         <h1 class="about__title">
-          <span>256Devs </span>
+          <span>Lorem </span>
 
-          Web and Mobile development (iOS & Android) | Back-end | Design
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+          temporibus!
         </h1>
 
         <div class="about__text">
           <p>
-            Overview 256Devs is a professional software development company -
-            iOS/Android/Web/Desktop specialized. More than 4+ years of
-            experience. Our strongest fields are native mobile app development
-            and backend. * We are not only coding - we do listen to all ideas
-            and bring ours to create a truly unique and special website/mobile
-            app for your business startup, or e-commerce niche, or a social
-            network. * We are open and honest with our clients and employers. *
-            We always try to follow fair-play, and our clients value such an
-            approach. * An accurate and proper planning is important, but we are
-            also flexible to discuss your concept and suggest what we believe
-            may improve your business ideas. If you need high-quality apps -
-            choose us!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea
+            cupiditate sapiente saepe architecto vitae eius odit est, sed vel
+            voluptatem voluptatibus pariatur perferendis reprehenderit a hic
+            delectus consequatur? Reprehenderit!
           </p>
-          <p>If you need high-quality apps - choose us!</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            perspiciatis doloribus veniam ut sequi! Quos, eaque illum officiis
+            natus debitis autem iste, veniam ut, praesentium recusandae iure
+            esse deserunt amet.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non,
+            eveniet!
+          </p>
         </div>
       </div>
     </div>
