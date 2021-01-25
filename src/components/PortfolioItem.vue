@@ -36,6 +36,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   column-gap: 10px;
+  row-gap: 10px;
 }
 .portfolio__item {
 }
@@ -55,9 +56,11 @@ export default {
 .portfolio__text {
 }
 .portfolio__btn {
+  display: block;
   font-size: 16px;
   padding: 12px 50px;
   color: #ffffff;
   background-color: #00a4e5;
+  margin: 20px auto;
 }
 </style>

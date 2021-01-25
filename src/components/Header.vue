@@ -156,12 +156,13 @@ export default {
   width: 50px;
   height: 4px;
   background: #00a4e5;
-
+  z-index: 50;
   position: relative;
   &::before,
   &::after {
     content: "";
     position: absolute;
+    z-index: 50;
     left: 0;
     width: 100%;
     height: 100%;
@@ -194,6 +195,7 @@ export default {
   border-radius: 8px;
   background-color: transparent;
   position: relative;
+  z-index: 50;
 
   &:hover {
     border-color: #00a4e5;
@@ -209,6 +211,7 @@ export default {
   fill: #999;
 
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -226,6 +229,7 @@ export default {
     background: #333;
     text-align: center;
     padding: 100px 10px 20px 10px;
+    z-index: 50;
   }
 
   .header__list.active {
