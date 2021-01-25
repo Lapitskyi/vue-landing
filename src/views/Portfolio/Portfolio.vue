@@ -1,7 +1,8 @@
 <template>
   <div class="portfolio">
-    <div class="container"></div>
-    <PortfolioItem :portfolio="portfolio" />
+    <div class="container">
+      <PortfolioItem :portfolio="portfolio" />
+    </div>
   </div>
 </template>
 
@@ -38,6 +39,12 @@ export default {
             },
             {
               id: "4",
+              img: "https://via.placeholder.com/150",
+              text: "Desing-text",
+              alt: "Desing-photo",
+            },
+            {
+              id: "5",
               img: "https://via.placeholder.com/150",
               text: "Desing-text",
               alt: "Desing-photo",
