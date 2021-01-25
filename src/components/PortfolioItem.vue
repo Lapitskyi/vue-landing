@@ -1,20 +1,16 @@
 <template>
-  <div class="portfolio">
-    <div class="container">
-      <div class="portfolio__inner" v-for="item of portfolio" :key="item">
-        <h2 class="portfolio__title">{{ item.title }}</h2>
+  <div class="portfolio__inner" v-for="item of portfolio" :key="item">
+    <h2 class="portfolio__title">{{ item.title }}</h2>
 
-        <div class="portfolio__box">
-          <div class="portfolio__item" v-for="data in item.data" :key="data">
-            <div class="portfolio__photo">
-              <img class="portfolio__img" :src="data.img" :alt="data.alt" />
-            </div>
-            <p class="portfolio__text">
-              {{ data.text }}
-            </p>
-            <button class="portfolio__btn">Wiew</button>
-          </div>
+    <div class="portfolio__box">
+      <div class="portfolio__item" v-for="data in item.data" :key="data">
+        <div class="portfolio__photo">
+          <img class="portfolio__img" :src="data.img" :alt="data.alt" />
         </div>
+        <p class="portfolio__text">
+          {{ data.text }}
+        </p>
+        <button class="portfolio__btn">Wiew</button>
       </div>
     </div>
   </div>
@@ -87,23 +83,13 @@ export default {
       },
     };
   },
-  methods: {
-    even: function (numbers) {
-      return numbers.filter(function (number) {
-        return number;
-      });
-    },
-  },
 };
 </script>
 
 <style lang="scss">
-.portfolio {
-  margin-top: 40px;
-}
-
 .portfolio__title {
   font-size: 40px;
+  margin-bottom: 20px;
 }
 .portfolio__inner + .portfolio__inner {
   margin-top: 50px;
