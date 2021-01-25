@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../components/Home'
-import Orders from '../components/Orders/Orders'
-import Portfolio from '../components/Portfolio/Portfolio'
-import Login from '../components/Auth/Login'
-import Registration from '../components/Auth/Registration'
-import Reset from '../components/Auth/Reset'
+import Home from '../views/Home'
+import Orders from '../views/Orders/Orders'
+import Portfolio from '../views/Portfolio/Portfolio'
+import Login from '../views/Auth/Login'
+import Registration from '../views/Auth/Registration'
+import Reset from '../views/Auth/Reset'
 
 
 

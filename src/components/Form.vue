@@ -4,7 +4,7 @@
       <div class="inner">
         <h3 class="title">{{ reg.title }}</h3>
 
-        <form class="form" action="/">
+        <form class="form">
           <label v-for="item in reg.forms" :key="item.items.name">
             <input
               class="form__input"
