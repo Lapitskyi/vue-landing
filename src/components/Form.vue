@@ -1,42 +1,38 @@
 <template>
-  <div class="login">
-    <div class="container">
-      <div class="inner">
-        <h3 class="title">{{ reg.title }}</h3>
+  <div class="inner">
+    <h3 class="title">{{ reg.title }}</h3>
 
-        <form class="form">
-          <label v-for="item in reg.forms" :key="item.items.name">
-            <input
-              class="form__input"
-              type="text"
-              :placeholder="item.items.placeholder"
-            />
-          </label>
+    <form class="form">
+      <label v-for="item in reg.forms" :key="item.items.name">
+        <input
+          class="form__input"
+          type="text"
+          :placeholder="item.items.placeholder"
+        />
+      </label>
 
-          <label class="form__label-checkbox" :class="{ active: reg.isActive }">
-            <input
-              class="form__checkbox"
-              :name="reg.span"
-              type="checkbox"
-              :id="reg.span"
-            />
-            <span class="form__check-style"></span>
-            {{ reg.span }}
-          </label>
+      <label class="form__label-checkbox" :class="{ active: reg.isActive }">
+        <input
+          class="form__checkbox"
+          :name="reg.span"
+          type="checkbox"
+          :id="reg.span"
+        />
+        <span class="form__check-style"></span>
+        {{ reg.span }}
+      </label>
 
-          <button class="form__btn btn" type="submit">{{ reg.btn }}</button>
-        </form>
+      <button class="form__btn btn" type="submit">{{ reg.btn }}</button>
+    </form>
 
-        <router-link
-          class="login__btn btn"
-          v-for="link in reg.links"
-          :key="link.name"
-          :to="link.link"
-        >
-          {{ link.name }}
-        </router-link>
-      </div>
-    </div>
+    <router-link
+      class="link__btn btn"
+      v-for="link in reg.links"
+      :key="link.name"
+      :to="link.link"
+    >
+      {{ link.name }}
+    </router-link>
   </div>
 </template>
 
@@ -49,11 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.login {
-  padding-top: 100px;
-  height: 100vh;
-}
-
 .inner {
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
     2px 2px 5px rgba(154, 147, 140, 0.5);
@@ -152,7 +143,7 @@ label + label {
   padding: 12px 30px;
 }
 
-.login__btn {
+.link__btn {
   color: #000000;
   font-size: 12px;
 
@@ -162,7 +153,7 @@ label + label {
   }
 }
 
-.login__btn + .login__btn {
+.link__btn + .link__btn {
   margin-top: 10px;
 }
 </style>
