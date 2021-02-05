@@ -28,6 +28,8 @@
           </p>
         </div>
       </div>
+
+      <router-link :to="href" class="test__btn btn">Click</router-link>
     </div>
   </div>
 </template>
@@ -39,9 +41,6 @@ export default {};
 <style lang="scss" scoped>
 .about {
   padding-top: 200px;
-}
-
-.about__inner {
 }
 
 .about__title {
@@ -60,6 +59,13 @@ export default {};
 
 .about__text {
   line-height: 1.5;
+}
+
+.test__btn {
+  border: 1px solid red;
+  padding: 12px 58px;
+  font-size: 16px;
+  color: #333;
 }
 
 @media (max-width: 992px) {
