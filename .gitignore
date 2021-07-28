@@ -1,7 +1,11 @@
 .DS_Store
 node_modules
 /dist
+#API KEY
+.env
 
+.idea
+.eslintcache
 
 # local env files
 .env.local

@@ -1,47 +1,44 @@
 <template>
-  <div>
-    <div class="about">
-      <div class="about__inner">
-        <h1 class="about__title">
-          <span>Lorem </span>
-
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-          temporibus!
-        </h1>
-
-        <div class="about__text">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ea
-            cupiditate sapiente saepe architecto vitae eius odit est, sed vel
-            voluptatem voluptatibus pariatur perferendis reprehenderit a hic
-            delectus consequatur? Reprehenderit!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            perspiciatis doloribus veniam ut sequi! Quos, eaque illum officiis
-            natus debitis autem iste, veniam ut, praesentium recusandae iure
-            esse deserunt amet.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non,
-            eveniet!
-          </p>
-        </div>
-      </div>
-
-      <router-link :to="href" class="test__btn btn">Click</router-link>
-    </div>
+  <div class="container">
+    <my-input
+        v-model="text"
+    />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+name: "home"
+}
 </script>
 
 <style lang="scss" scoped>
+.input {
+  border: 1px solid red;
+}
+
+.btn_img {
+  border: 1px solid red;
+  padding: 5px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+
+}
+
 .about {
   padding-top: 200px;
 }
+
 
 .about__title {
   font-family: "AdventPro-Bold", sans-serif;
@@ -49,6 +46,7 @@ export default {};
   font-size: 28px;
 
   margin-bottom: 20px;
+
   span {
     font-size: 40px;
     margin-bottom: 10px;

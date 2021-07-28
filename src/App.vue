@@ -1,9 +1,12 @@
 
 <template>
-  <div id="wraper">
+  <div id="wrapper">
     <Header />
   </div>
-  <!-- <router-view /> -->
+  <div class="container">
+    <router-view></router-view>
+  </div>
+
 </template>
 
 <script>
@@ -21,6 +24,7 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/null.scss";
+@import "./assets/scss/vars.scss";
 // @import "./assets/scss/fonts.scss";
 
 @import "./assets/scss/global.scss";

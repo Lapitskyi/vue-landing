@@ -2,11 +2,7 @@
   <div class="header">
     <div class="container">
       <div class="header__inner">
-        <div class="header__logo">
-          <router-link to="./">
-            <img src="https://via.placeholder.com/100" alt="logo" />
-          </router-link>
-        </div>
+        <Logo/>
 
         <ul class="header__list" :class="{ active: isActive }">
           <li class="header__list-item" v-for="item in items" :key="item.title">
@@ -15,87 +11,26 @@
             </router-link>
           </li>
         </ul>
-
-        <ul class="social__list">
-          <li
-            class="social__list-item"
-            v-for="item in socials"
-            :key="item.icon"
-          >
-            <a
-              class="social__list-link"
-              :href="item.link"
-              :aria-label="item.label"
-            >
-              <img class="social__list-icon" :src="item.icon" :alt="item.alt" />
-            </a>
-          </li>
-        </ul>
-
-        <button
-          class="header__btn btn"
-          :class="{ active: isActive }"
-          @click="isActive = !isActive"
-        >
-          <span :class="{ active: isActive }" class="header__btn-line"></span>
-        </button>
       </div>
-      <router-view />
     </div>
   </div>
 </template>
 
 
 <script>
+import Logo from "@/components/Logo";
+
 export default {
   name: "header",
-
+  components: {Logo},
   data() {
     return {
       items: [
-        { title: "Home", path: "/" },
-
-        { title: "Order", path: "/order" },
-        { title: "Portfolio", path: "/portfolio" },
-        { title: "Login", path: "/login" },
-        { title: "Registration", path: "/registration" },
-      ],
-      socials: [
-        {
-          icon:
-            "https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-256.png",
-          link: "https://www.instagram.com/",
-          label: "instagram",
-          alt: "logo_instagram",
-        },
-        {
-          icon:
-            "https://cdn4.iconfinder.com/data/icons/social-icons-16/512/LinkedIn_alt-256.png",
-          link: "https://www.linkedin.com/",
-          label: "linkedin",
-          alt: "logo_linkedin",
-        },
-        {
-          icon:
-            "https://cdn2.iconfinder.com/data/icons/picons-social/57/79-upwork-2-256.png",
-          link: "https://www.upwork.com/",
-          label: "upwork",
-          alt: "logo_upwork",
-        },
-        {
-          icon:
-            "https://cdn3.iconfinder.com/data/icons/glypho-free/64/phone-outline-256.png",
-          link: "tel:+8050000000",
-          label: "tel",
-          alt: "logo_tel",
-        },
-        {
-          icon:
-            "https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-02-256.png",
-          link: "mailto:mail.gmail.com",
-          label: "mail",
-          alt: "mail",
-        },
+        {title: "Work", path: "/work"},
+        {title: "About", path: "/about"},
+        {title: "Teams", path: "/teams"},
+        {title: "Blog", path: "/blog"},
+        {title: "Contact", path: "/contact"},
       ],
 
       isActive: false,
@@ -107,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 .header {
 }
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -114,15 +50,6 @@ export default {
   padding: 10px 0;
 }
 
-.header__logo {
-  width: 100px;
-  overflow: hidden;
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-}
 
 .header__list {
   list-style: none;
@@ -130,14 +57,17 @@ export default {
   padding: 0;
   margin: 0;
 }
+
 .header__list-item + .header__list-item {
   margin-left: 50px;
 }
+
 .header__list-item {
 }
 
 .header__list-link {
   color: #999;
+
   &:hover {
     color: #00a4e5;
   }
@@ -158,6 +88,7 @@ export default {
   background: #00a4e5;
   z-index: 50;
   position: relative;
+
   &::before,
   &::after {
     content: "";
@@ -179,43 +110,7 @@ export default {
   }
 }
 
-.social__list {
-  display: flex;
-}
-.social__list-item + .social__list-item {
-  margin-left: 25px;
-}
-.social__list-item {
-}
-.social__list-link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border: solid 1px #999;
-  border-radius: 8px;
-  background-color: transparent;
-  position: relative;
-  z-index: 50;
 
-  &:hover {
-    border-color: #00a4e5;
-    background-color: #00a4e5;
-    .contact__list-icon {
-      fill: #999;
-    }
-  }
-}
-.social__list-icon {
-  width: 25px;
-  height: 25px;
-  fill: #999;
-
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 @media (max-width: 992px) {
   .header__list {
